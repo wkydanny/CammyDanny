@@ -19,24 +19,37 @@
 
         /* Hero Banner */
         .hero {
-            background: linear-gradient(145deg, #ffd6e8, #ffb8d9);
-            text-align: center;
-            padding: 80px 20px;
             position: relative;
+            text-align: center;
+            /* remove old background from here */
+            padding: 200px 20px;
+            overflow: hidden;
         }
-
+        .hero-bg-img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;       /* fit full webpage width */
+            height: auto;      /* auto calculate height keep aspect ratio */
+            z-index: -2;       /* send image behind text */
+            object-position: center bottom; /* show bottom portion of photo */
+        }
+        .hero‑overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(255,184,217,0.65), rgba(255,214,232,0.65));
+            z-index: -1; /* overlay sits between image and text */
+        }
         .hero h1 {
             font-size: 3rem;
             color: #992e5c;
             margin-bottom: 12px;
         }
-
         .hero p.subtitle {
             font-size: 1.3rem;
             color: #772448;
             letter-spacing: 2px;
         }
-
         .heart-divider {
             color: #ff6ea6;
             font-size: 2rem;
@@ -179,6 +192,9 @@
 <body>
     <!-- Hero Header -->
     <header class="hero">
+        <img class="hero-bg-img" src="preview/Header.JPG" alt="Wedding header background">
+        <div class="hero‑overlay"></div>
+
         <h1>Danny & Cammy</h1>
         <p class="subtitle">Our Wedding Photo Album</p>
         <div class="heart-divider">♥ ♥ ♥</div>
@@ -267,7 +283,9 @@
     <!-- Love Quote Section -->
     <section class="quote-section fade-in">
         <p class="quote-text">
-            "I choose you, and I will choose you, over and over and over. Without pause, without a doubt, in a heartbeat. I will keep choosing you, Cammy."
+            "I choose you, and I will choose you, over and over and over. <br>
+			Without pause, without a doubt, in a heartbeat. <br>
+			I will keep choosing you, Cammy."
         </p>
         <br>
         <p>— Forever yours, Danny</p>
