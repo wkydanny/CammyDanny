@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danny & Cammy | Our Wedding Album</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fff5f9;
+            color: #442233;
+        }
+
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(145deg, #ffd6e8, #ffb8d9);
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #992e5c;
+            margin-bottom: 12px;
+        }
+
+        .hero p.subtitle {
+            font-size: 1.3rem;
+            color: #772448;
+            letter-spacing: 2px;
+        }
+
+        .heart-divider {
+            color: #ff6ea6;
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+
+        /* Section Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #992e5c;
+            margin-bottom: 40px;
+        }
+
+        /* Album Grid */
+        .album-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+        }
+
+        .album-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            padding: 0;
+            box-shadow: 0 6px 18px rgba(255, 140, 180, 0.25);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #ffe6f0;
+        }
+
+        .album-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 24px rgba(255, 140, 180, 0.35);
+        }
+
+        /* Thumbnail preview image */
+        .album-thumb {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .album-card:hover .album-thumb {
+            transform: scale(1.05);
+        }
+
+        .album-card-content {
+            padding: 24px;
+        }
+
+        .album-card h3 {
+            color: #b3396b;
+            margin-bottom: 14px;
+            font-size: 1.25rem;
+        }
+
+        .album-card p {
+            color: #663349;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .album-btn {
+            display: inline-block;
+            background-color: #ff87b2;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .album-btn:hover {
+            background-color: #e86898;
+        }
+
+        /* Love Quote Section */
+        .quote-section {
+            background-color: #ffeaf4;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .quote-text {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.4rem;
+            color: #772448;
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #992e5c;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer p {
+            opacity: 0.9;
+        }
+
+        /* Fade In Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .album-thumb {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Header -->
+    <header class="hero">
+        <h1>Danny & Cammy</h1>
+        <p class="subtitle">Our Wedding Photo Album</p>
+        <div class="heart-divider">♥ ♥ ♥</div>
+        <p>A collection of our precious wedding memories together</p>
+    </header>
+
+    <!-- Albums Section -->
+    <section class="container fade-in">
+        <h2 class="section-title">Our Photo Collections</h2>
+        <div class="album-grid">
+            <div class="album-card">
+                <img src="preview/AlbumGiftbox.jpg" alt="AlbumGiftbox preview" class="album-thumb">
+                <div class="album-card-content">
+                    <h3>AlbumGiftbox</h3>
+                    <p>Special giftbox wedding photos</p>
+                    <a href="https://photos.app.goo.gl/48vkXNvjFxofsEpM9" target="_blank" class="album-btn">Open Album</a>
+                </div>
+            </div>
+            <div class="album-card">
+                <img src="preview/AlbumLarge.jpg" alt="AlbumLarge preview" class="album-thumb">
+                <div class="album-card-content">
+                    <h3>AlbumLarge</h3>
+                    <p>Large wedding photo set</p>
+                    <a href="https://photos.app.goo.gl/W2YezZysGNkEaqoXA" target="_blank" class="album-btn">Open Album</a>
+                </div>
+            </div>
+            <div class="album-card">
+                <img src="preview/AlbumSmall.jpg" alt="AlbumSmall preview" class="album-thumb">
+                <div class="album-card-content">
+                    <h3>AlbumSmall</h3>
+                    <p>Small wedding photo collection</p>
+                    <a href="https://photos.app.goo.gl/Lx3sWrDPnjZAvBZX9" target="_blank" class="album-btn">Open Album</a>
+                </div>
+            </div>
+            <div class="album-card">
+                <img src="preview/All_20260812.JPG" alt="All_20260812 preview" class="album-thumb">
+                <div class="album-card-content">
+                    <h3>All_20260812</h3>
+                    <p>Full set from our wedding day</p>
+                    <a href="https://photos.app.goo.gl/cztjgRkNNkZ6mnEM7" target="_blank" class="album-btn">Open Album</a>
+                </div>
+            </div>
+            <div class="album-card">
+                <img src="preview/Enlarged.JPG" alt="Enlarged preview" class="album-thumb">
+                <div class="album-card-content">
+                    <h3>Enlarged</h3>
+                    <p>Enlarged favorite wedding shots</p>
+                    <a href="https://photos.app.goo.gl/UiuBypqxEiaosA3H7" target="_blank" class="album-btn">Open Album</a>
+                </div>
+            </div>
+            <div class="album-card">
+                <img src="preview/Set1_intoAlbumSmall.JPG" alt="Set1_intoAlbumSmall preview" class="album-thumb">
+                <div class="album-card-content">
+                    <h3>Set1_intoAlbumSmall</h3>
+                    <p>Photo set 1</p>
+                    <a href="https://photos.app.goo.gl/ui7m6JGgydDx7bTG8" target="_blank" class="album-btn">Open Album</a>
+                </div>
+            </div>
+            <div class="album-card">
+                <img src="preview/Set2_intoAlbumLarge.JPG" alt="Set2_intoAlbumLarge preview" class="album-thumb">
+                <div class="album-card-content">
+                    <h3>Set2_intoAlbumLarge</h3>
+                    <p>Photo set 2</p>
+                    <a href="https://photos.app.goo.gl/PGWqLQeMTxDYhoyD7" target="_blank" class="album-btn">Open Album</a>
+                </div>
+            </div>
+            <div class="album-card">
+                <img src="preview/ShortVideo.JPG" alt="ShortVideo preview" class="album-thumb">
+                <div class="album-card-content">
+                    <h3>ShortVideo</h3>
+                    <p>Wedding short video clips</p>
+                    <a href="https://photos.app.goo.gl/qJbwp1HZvn6thXtEA" target="_blank" class="album-btn">Open Video Album</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Quote Section -->
+    <section class="quote-section fade-in">
+        <p class="quote-text">
+            "I choose you, and I will choose you, over and over and over. Without pause, without a doubt, in a heartbeat. I will keep choosing you, Cammy."
+        </p>
+        <br>
+        <p>— Forever yours, Danny</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with love for Cammy | Danny & Cammy Wedding Memories</p>
+    </footer>
+
+    <script>
+        // Scroll fade-in animation
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        fadeElements.forEach(el => observer.observe(el));
+
+        // Simple heart animation on button click
+        const buttons = document.querySelectorAll('.album-btn');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', ()=>{
+                console.log("Opening album for Danny & Cammy 💗");
+            })
+        })
+    </script>
+</body>
+</html>
